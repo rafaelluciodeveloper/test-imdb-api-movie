@@ -26,8 +26,8 @@ After get these content, the application convert these for a object class and so
 ### - Output Data Format
 * The output is with this format 
 `<payload_lenght>:<payload>`
-*payload_length : is the length of the payload content
-*payload : is the response content
+* payload_length : is the length of the payload content
+* payload : is the response content
 * Each movie title was separated with (\n).
 
 ### - Examples input/ouput
