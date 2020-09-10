@@ -1,0 +1,41 @@
+plugins {
+    id 'application'
+}
+
+group 'br.com.rafaellucio.imdb.api.movie.client'
+version '1.0-SNAPSHOT'
+
+apply plugin : "java"
+
+mainClassName = "br.com.rafaellucio.imdb.api.movie.client.ImdbApiMovieClientApp"
+
+jar {
+    manifest { 
+    	attributes "Main-Class": "$mainClassName"
+  	}  
+    from {
+ 	   configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  	}
+}
+
+task runJar(type: Exec) {
+    dependsOn jar
+    group = "Execution"
+    description = "Run .jar"
+    commandLine "java", "-jar", jar.archiveFile.get()
+}
+
+
+repositories {
+    jcenter()
+}
+
+configurations {
+    extraLibs
+}
+
+dependencies {
+    implementation 'org.apache.commons:commons-math3:3.6.1'
+    implementation 'com.google.guava:guava:28.2-jre'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
