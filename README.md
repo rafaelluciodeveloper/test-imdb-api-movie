@@ -1,6 +1,6 @@
 # Api Movies Imdb
 ###  - Target
-The customer has requested a way to query for movie titles in IMDB.
+> The customer has requested a way to query for movie titles in IMDB.
 
 ### - Stack 
 - [x] Java 1.8
@@ -10,7 +10,7 @@ The customer has requested a way to query for movie titles in IMDB.
 - [x] Junit (4.12)
 
 ### - Details
-After get these content, the application convert these for a object class and so filter to get just the movies titles. At the proccess finish, the application generate the response object with base at the output definition format.
+> After get these content, the application convert these for a object class and so filter to get just the movies titles. At the proccess finish, the application generate the response object with base at the output definition format.
 
 - [x] The Optional Java Class was used to evite null
 - [x] The number port 37000 (TCP) is ready for requests
@@ -18,16 +18,16 @@ After get these content, the application convert these for a object class and so
 - [x] The SOLID principles was respected
 
 ### - Input Data Format
-* The input is with this format 
+* The input is with this format : 
 `<query_length>:<query>`
-* query_length : is the length of the query
-* query : is the movie title to search 
+* query_length -> is the length of the query
+* query -> is the movie title to search 
 
 ### - Output Data Format
-* The output is with this format 
+* The output is with this format :
 `<payload_lenght>:<payload>`
-* payload_length : is the length of the payload content
-* payload : is the response content
+* payload_length -> is the length of the payload content
+* payload -> is the response content
 * Each movie title was separated with (\n).
 
 ### - Examples input/ouput
@@ -60,7 +60,7 @@ Output : 4380:The Avengers: Os Vingadores\nOs Vingadores da Costa Oeste\nNovgoro
 ```
 ./gradlew build
 ```
-* The jar file will be generated at  `<project>`/build/libs/
+> The jar file will be generated at  `<project>`/build/libs/
 
 #### RUNING
 ```
@@ -72,14 +72,14 @@ Output : 4380:The Avengers: Os Vingadores\nOs Vingadores da Costa Oeste\nNovgoro
 ```
 
 ### CALLING SERVER
-to get the server's response, follow some suggestions:
+> to get the server's response, follow some suggestions:
 
 ### 1. Using imdb-api-movie-client
-open your console in the imdb-api-movie-client folder and run the following command:
-* this project is for testing only and does not follow the principles of SOLID or any design pattern.
+* open your console in the imdb-api-movie-client folder and run the following command:
 ```
 ./gradlew runJar
 ```
+> this project is for testing only and does not follow the principles of SOLID or any design pattern.
 
 ### 2. Using PuTTY Telnet
 
